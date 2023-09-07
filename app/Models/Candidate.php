@@ -10,14 +10,14 @@ class Candidate extends Model
     use HasFactory;
 
     public function categories(){
-        return $this->belongsToMany(Category::class);
+        return $this->hasMany(Category::class);
     }
 
     public function commentaries(){
-        return $this->belongsToMany(Commentary::class);
+        return $this->hasMany(Commentary::class);
     }
 
     public function multimedias(){
-        return $this->belongsToMany(Multimedia::class);
+        return $this->hasMany(Multimedia::class);
     }
 }

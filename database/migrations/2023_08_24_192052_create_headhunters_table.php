@@ -13,13 +13,10 @@ return new class extends Migration
     {
         Schema::create('headhunters', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre');
-            $table->string('telefono');
-            $table->string('correo electronico');
             $table->timestamps();
 
-            $table->unsignedBigInteger('User_id');
-            $table->foreign('User_id')
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')
             ->references('id')
             ->on('users')
             ->onDelete('cascade')

@@ -10,10 +10,10 @@ class Multimedia extends Model
     use HasFactory;
 
     public function commentaries(){
-        return $this->belongsToMany(Commentary::class);
+        return $this->hasMany(Commentary::class);
     }
 
     public function candidates(){
-        return $this->belongsTo(Candidate::class);
+        return $this->hasMany(Candidate::class);
     }
 }

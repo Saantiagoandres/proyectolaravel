@@ -17,6 +17,15 @@ return new class extends Migration
             $table->string('archivo');
             $table->string('descripcion');
             $table->timestamps();
+
+            $table->unsignedBigInteger('candidate_id');
+            $table->foreign('candidate_id')
+            ->references('id')
+            ->on('candidates')
+            ->onDelete('cascade')
+            ->onUpdate('cascade');
+
+        
         });
     }
 

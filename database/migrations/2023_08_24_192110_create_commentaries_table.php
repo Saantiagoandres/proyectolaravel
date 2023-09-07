@@ -16,22 +16,22 @@ return new class extends Migration
             $table->string('descripcion');
             $table->timestamps();
 
-            $table->unsignedBigInteger('Multimedia_id');
-            $table->foreign('Multimedia_id')
+            $table->unsignedBigInteger('multimedia_id');
+            $table->foreign('multimedia_id')
             ->references('id')
             ->on('multimedia')
             ->onDelete('cascade')
             ->onUpdate('cascade');
 
-            $table->unsignedBigInteger('Candidates_id');
-            $table->foreign('Candidates_id')
+            $table->unsignedBigInteger('candidate_id');
+            $table->foreign('candidate_id')
             ->references('id')
             ->on('candidates')
             ->onDelete('cascade')
             ->onUpdate('cascade');
 
-            $table->unsignedBigInteger('Headhunter_id');
-            $table->foreign('Headhunter_id')
+            $table->unsignedBigInteger('headhunter_id');
+            $table->foreign('headhunter_id')
             ->references('id')
             ->on('headhunters')
             ->onDelete('cascade')

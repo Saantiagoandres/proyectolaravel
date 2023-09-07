@@ -10,6 +10,6 @@ class Headhunter extends Model
     use HasFactory;
 
     public function comentaries(){
-        return $this->belongsToMany(Commentary::class);
+        return $this->hasMany(Commentary::class);
     }
 }

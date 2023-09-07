@@ -13,6 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
 });
+*/
+
+
+Route::get('registros', [CursoController::class, 'index'])->name('registros.index');
+Route::post('registros', [CursoController::class, 'store'])->name('registros.store');
+Route::get('registros/create', [CursoController::class, 'create']);
+Route::delete('registro/{registro}', [CursoController::class, 'destroy'])->name('registro.destroy');
+Route::get('registros/{registro}', [CursoController::class, 'show'])->name('registro.show');

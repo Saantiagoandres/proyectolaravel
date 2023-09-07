@@ -9,15 +9,15 @@ class Commentary extends Model
 {
     use HasFactory;
 
-    public function headhunters(){
+    public function headhunter(){
         return $this->belongsTo(Headhunter::class);
     }
 
-    public function candidates(){
+    public function candidate(){
         return $this->belongsTo(Candidate::class);
     }
 
-    public function Multimedias(){
+    public function multimedia(){
         return $this->belongsTo(Multimedia::class);
     }
 }
