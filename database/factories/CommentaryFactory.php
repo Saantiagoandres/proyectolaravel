@@ -2,6 +2,9 @@
 
 namespace Database\Factories;
 
+use App\Models\Candidate;
+use App\Models\Headhunter;
+use App\Models\Multimedia;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +20,11 @@ class CommentaryFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'descripcion'=>$this->faker->text(),
+
+            'multimedia_id'=>Multimedia::inRandomOrder()->first(),
+            'candidate_id'=>Candidate::inRandomOrder()->first(),
+            'headhunter_id'=>Headhunter::inRandomOrder()->first(),
         ];
     }
 }

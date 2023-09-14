@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Candidate;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +18,10 @@ class CategoryFactory extends Factory
     public function definition(): array
     {
         return [
-            
+            'descripcion'=>$this->faker->text(),
+
+            'candidate_id'=>Candidate::inRandomOrder()->first()
+          
         ];
     }
 }

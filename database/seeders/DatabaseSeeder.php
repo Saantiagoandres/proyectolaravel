@@ -5,7 +5,10 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 use App\Models\Candidate;
+use App\Models\Category;
+use App\Models\Commentary;
 use App\Models\Headhunter;
+use App\Models\Multimedia;
 use App\Models\Role;
 use App\Models\User;
 use Illuminate\Database\Seeder;
@@ -22,6 +25,10 @@ class DatabaseSeeder extends Seeder
         User::factory(15)->create();
         Candidate::factory(15)->create();
         Headhunter::factory(15)->create();
+        Category::factory(15)->create();
+        Multimedia::factory(15)->create();
+        Commentary::factory(15)->create();
+
 
 
 

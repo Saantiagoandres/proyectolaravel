@@ -1,5 +1,6 @@
 <?php
-
+use App\Http\Controllers\UserController;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,8 +20,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('registros', [CursoController::class, 'index'])->name('registros.index');
-Route::post('registros', [CursoController::class, 'store'])->name('registros.store');
-Route::get('registros/create', [CursoController::class, 'create']);
-Route::delete('registro/{registro}', [CursoController::class, 'destroy'])->name('registro.destroy');
-Route::get('registros/{registro}', [CursoController::class, 'show'])->name('registro.show');
+// Route::get('users', [UserController::class, 'index'])->name('users.index');
+// Route::post('users', [UserController::class, 'store'])->name('users.store');
+// Route::get('users/create', [UserController::class, 'create'])->name('users.create');
+// Route::delete('user/{user}', [CursoController::class, 'destroy'])->name('user.destroy');
+// Route::get('users/{user}', [CursoController::class, 'show'])->name('user.show');
+
+
+Route::resource('users', UserController::class);

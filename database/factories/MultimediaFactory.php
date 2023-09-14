@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Candidate;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +18,11 @@ class MultimediaFactory extends Factory
     public function definition(): array
     {
         return [
-            
+            'name'=>$this->faker->text(),
+            'archivo'=>$this->faker->randomElement(['IMG', 'VIDEO']),
+            'descripcion'=>$this->faker->text(),
+
+            'candidate_id'=>Candidate::inRandomOrder()->first()
         ];
     }
 }
