@@ -4,6 +4,7 @@
 
 @section ('content')
 
+    
     <h1>Registrate Aqui</h1>
 
         <form action="{{ route('users.store') }}" method="POST">
@@ -36,4 +37,4 @@
 
         </form>
 
-@endsection0
+@endsection
