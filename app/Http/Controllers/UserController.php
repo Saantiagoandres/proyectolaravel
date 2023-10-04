@@ -18,14 +18,11 @@ class UserController extends Controller
 }
     public function create(){
         $roles = Role::all();
-
-        
         return view('users.create', ['role'=>$roles]);
 
     }
 
     public function store(Request $request){
-        
         $user = new User();
         $user->name = $request->name;
         $user->lastname = $request->lastname;
@@ -34,7 +31,5 @@ class UserController extends Controller
         $user->password = $request->password;
         $user->role_id=$request->role_id;
         $user->save();
-
-
     }
 }
